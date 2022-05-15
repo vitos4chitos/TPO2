@@ -6,6 +6,7 @@ import java.math.RoundingMode;
 public class Cos {
 
     public double cos(double x, double delta){
+        x = simple(x);
         double sum = 0;
         int n = 1;
         double step;
@@ -16,6 +17,16 @@ public class Cos {
         } while (Double.compare(Math.abs(step), delta) >= 0);
         return sum + 1;
 
+    }
+
+    private double simple(double x) {
+        while (Double.compare(x, -2 * Math.PI) < 0) {
+            x += 2 * Math.PI;
+        }
+        while (Double.compare(x, Math.PI * 2) > 0) {
+            x -= 2 * Math.PI;
+        }
+        return x;
     }
 
     private double nextTerm(int step, double value){

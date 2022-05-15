@@ -9,8 +9,9 @@ public class LogN {
         this.ln = ln;
     }
 
-    public double logN(double x, double n, double delta){
-    System.out.println(x + " " + n + " " + delta);
+    public double logN(double x, double n, double delta) {
+        if (Double.compare(x, 1.0) == 0)
+            return Double.NaN;
         return ln.ln(x, delta)/ln.ln(n, delta);
     }
 }
