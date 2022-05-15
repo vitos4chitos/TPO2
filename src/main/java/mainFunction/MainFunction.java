@@ -35,16 +35,15 @@ public class MainFunction {
         }
     }
 
-    private double log2(double x, double delta){
+    public double log2(double x, double delta){
         return logN.logN(x, 2, delta);
     }
 
-
-    private double log5(double x, double delta){
+    public double log5(double x, double delta){
         return logN.logN(x, 5, delta);
     }
 
-    private double log10(double x, double delta){
+    public double log10(double x, double delta){
         return logN.logN(x, 10, delta);
     }
 }

@@ -6,6 +6,7 @@ import java.math.RoundingMode;
 public class Sin {
 
     public double sin(double x, double delta){
+        x = simplification(x);
         double sum = 0;
         int n = 0;
         double step;
@@ -33,5 +34,16 @@ public class Sin {
             value = value.multiply(BigDecimal.valueOf(i));
         }
         return value;
+    }
+
+    private double simplification(double x){
+        double k = x;
+        while(Double.compare(k, 0) < 0){
+            k += Math.PI * 2;
+        }
+        while (Double.compare(k, Math.PI * 2) > 0){
+            k -= Math.PI * 2;
+        }
+        return k;
     }
 }

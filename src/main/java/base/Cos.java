@@ -6,6 +6,7 @@ import java.math.RoundingMode;
 public class Cos {
 
     public double cos(double x, double delta){
+        x = simplification(x);
         double sum = 0;
         int n = 1;
         double step;
@@ -24,7 +25,6 @@ public class Cos {
         if(step % 2 != 0){
             divider = divider.negate();
         }
-        System.out.println(divider + " " + divisible);
         return divisible.divide(divider, 10, RoundingMode.HALF_UP).doubleValue();
     }
 
@@ -34,5 +34,16 @@ public class Cos {
             value = value.multiply(BigDecimal.valueOf(i));
         }
         return value;
+    }
+
+    private double simplification(double x){
+        double k = x;
+        while(Double.compare(k, 0) < 0){
+            k += Math.PI * 2;
+        }
+        while (Double.compare(k, Math.PI * 2) > 0){
+            k -= Math.PI * 2;
+        }
+        return k;
     }
 }
