@@ -1,9 +1,12 @@
 package mainFunction;
 
 import base.Ln;
+import com.sun.tools.javac.Main;
 import complexFunctions.Cot;
 import complexFunctions.Csc;
 import complexFunctions.LogN;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 public class MainFunction {
 

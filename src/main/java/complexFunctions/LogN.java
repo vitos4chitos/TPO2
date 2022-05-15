@@ -10,7 +10,7 @@ public class LogN {
     }
 
     public double logN(double x, double n, double delta){
-
+    System.out.println(x + " " + n + " " + delta);
         return ln.ln(x, delta)/ln.ln(n, delta);
     }
 }

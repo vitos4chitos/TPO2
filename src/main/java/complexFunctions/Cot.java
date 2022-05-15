@@ -2,7 +2,9 @@ package complexFunctions;
 
 import base.Cos;
 import base.Sin;
+import lombok.Getter;
 
+@Getter
 public class Cot {
     private final Sin sin;
     private final Cos cos;

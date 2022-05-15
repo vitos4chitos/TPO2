@@ -7,6 +7,7 @@ public class Ln {
     private final static double DELTA = 1e-12;
 
     public double ln(double x, double delta) {
+        System.out.println(x + " " + delta);
         if (Double.compare(x, 0.0) < 0) {
             return Double.NaN;
         }
